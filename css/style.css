@@ -1,9 +1,22 @@
 /***** GENERAL STYLING *****/
+html {
+    background-color: black;
+    scroll-behavior: smooth;
+  }
+
 /* Body */
 body {
     margin: 0% ; 
-    
+    opacity: 1;
+    transition: 1.5s opacity;
 }
+
+
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+  }
 
 .main {
     padding-top: 1.9%; 
@@ -17,7 +30,14 @@ h1 {
     text-transform: uppercase; 
     font-family: "Trebuchet MS", Optima; 
     text-align: center; 
-    margin-top: 3%; 
+    margin-top: 1%; 
+    color: #ffeaea; 
+}
+h1#CF {
+    text-transform: uppercase; 
+    font-family: "Trebuchet MS", Optima; 
+    text-align: center; 
+    margin-top: -6%; 
     color: #ffeaea; 
 }
 
@@ -53,6 +73,14 @@ p:hover {
 .center {
     text-align: center; 
 }
+
+.hCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    
+  }
 
 
 .center:hover {
@@ -135,7 +163,7 @@ footer {
     padding: 14px 16px;
     text-decoration: none; 
     font-family: Avant Garde, Helvetica; 
-    font-size: 20px; 
+    font-size: 1.8vw; 
     text-align: center; 
     position: relative; 
     -webkit-animation: moveNavText 5.75s; 
@@ -223,8 +251,22 @@ footer {
     background: rgba(23, 7, 49, .9);
     box-shadow: inset 0 0 15px #000000;
     z-index: 2;
+    overflow: hidden;
     
 }
+
+@media screen and (min-width: 901px) {
+    p#about {
+      font-size: 18px;
+    }
+  }
+  
+ 
+@media screen and (max-width: 900px) {
+    p#about {
+      font-size: 14px;
+    }
+  }
 
 
 @media screen and (max-width: 576px) {
@@ -264,9 +306,6 @@ footer {
     
 }
     
-    
-    
-
 
 
 .Column_tall {
@@ -290,8 +329,8 @@ input[type=text] {
     border: 1px solid #ccc; 
     border-radius: 4px; 
     box-sizing: border-box; 
-    margin-top: 6px; 
-    margin-bottom: 16px; 
+    margin-top: 4px; 
+    margin-bottom: 18px; 
     resize: vertical; 
     font-family: Perpetua, Rockwell Extra Bold;
 }
@@ -303,7 +342,7 @@ input[type=text]:hover {
 
 /* Submit button */
 input[type=submit] {
-    background-color: black; 
+    background-color: #373775; 
     color: white; 
     font-weight: bold; 
     padding: 12px 20px; 
@@ -312,7 +351,7 @@ input[type=submit] {
     cursor: pointer; 
     display: block; 
     margin-left: auto; 
-    margin-right: auto;
+    margin-right: 9%;
     font-family: Perpetua, Rockwell Extra Bold;
 }
 
@@ -320,17 +359,137 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: white; 
     color: black; 
-    transform: scale(1.5); 
+    transform: scale(1.1); 
     transition: transform 1.5s; 
 }
 
 
-form {
-    border-radius: 5px; 
-    background-color: rgba(255, 228, 236, 0.5);
-    padding: 10px; 
-    font-family: "Trebuchet MS", Optima;
-    margin-top: -58px;
+
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+background-color: #373775; 
+  color: white; 
+  font-weight: bold; 
+  padding: 12px 10px; 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  opacity: 0.8;
+  position: relative;
+  bottom: -10px;
+  left: auto;
+  width: 280px;
+  
 }
+
+.open-button:hover {
+    background-color: white; 
+    color: black; 
+    transform: scale(1.2); 
+    transition: transform 1.5s; 
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: relative;
+  bottom: 220px;
+  right: auto;
+  border-radius: 5px; 
+  background-color: rgba(255, 228, 236, 0.5);
+  padding: 4px; 
+  font-family: "Trebuchet MS", Optima;
+  margin-top: -56px;
+  z-index: 9;
+  height: 400px;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: auto;
+  max-height: 50px;
+  
+}
+
+
+
+
+/* cancel button */
+.form-container .cancel {
+    background-color: #373775; 
+    color: white; 
+    font-weight: bold; 
+    padding: 12px 80px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: 40%;
+    margin-top: -39px;
+    font-family: Perpetua, Rockwell Extra Bold;
+}
+
+@media screen and (min-width: 781px) {
+    .form-container .cancel  {
+        padding: 12px 80px; 
+        margin-right: 40%;
+    }
+  }
+  
+ 
+@media screen and (max-width: 780px) {
+    .form-container .cancel  {
+        padding: 12px 10px; 
+        margin-right: 60%;
+    }
+  }
+
+.form-container .cancel:hover {
+    background-color: white; 
+    color: black; 
+    transform: scale(1.1); 
+    transition: transform 1.5s; 
+}
+
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+
 /***** END OF CONTACT FORM *****/
 
+/***** SLIDE SHOW *****/
+/* The dots/bullets/indicators */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+    bottom: 40px;
+
+  }
+  
+  .active {
+    background-color: #373775;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 2s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .2} 
+    to {opacity: 1}
+  }
+  
+
+/***** END SLIDE SHOW *****/

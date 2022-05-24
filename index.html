@@ -6,10 +6,15 @@
         <meta name="viewport" content="width=device-width" />
         <title>Gabriel Jones's Portfolio</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="js/main.js" defer></script>
     </head>
 
     <!--Body-->
+   
+
     <body class="Background">
+        
+        
         
         <!--Navbar-->
         <div class="Navbar">
@@ -33,6 +38,7 @@
         </div>
 
         <!--Video text-->
+    
         <div class="Video_Text">
             <h1 class="white-text">Gabriel Jones's Portfolio</h1>
             <strong>
@@ -42,8 +48,12 @@
                         <br>What I strive for is to make the person playing the game the director.</q>
                         
                     <br> - Shigeru Miyamoto.
+                </p>
+                    <hr>
+                    <p class="center">
+                    <br> My name is Gabriel Jones .
                     <br>
-                    <br> My name is Gabriel Jones . Welcome to my portfolio website. On it, I will tell you about my background and experience.
+                     Welcome to my portfolio website. On it, I will tell you about my background and experience.
                     <br>
                     <br> Thank you for stopping by and enjoy! 
                 </p>
@@ -51,35 +61,64 @@
         </div>
 
         <!--Top Padding-->
-        <div class="main">
+        <div class="main" id="About">
         </div>
         <!--End Top Padding-->
 
         <!--About section-->
-        <div class="Row" id="About">
+        <div class="Row">
             <!--Left column-->
             <div class="Column_2_1">
-                <img src="images/Gabriel.jpg" alt="Gabriel Jones">
+                
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                      
+                      <img src="images/Gabriel.jpg" style="width:100%">
+                      
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      
+                      <img src="images/GIF1.gif" style="width:100%">
+                      
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      
+                      <img src="images/GIF2.gif" style="width:100%">
+                      
+                    </div>
+                    <br>
+                    </div>
+                    
+                    
+                    <div style="text-align:center">
+                      <span class="dot"></span> 
+                      <span class="dot"></span> 
+                      <span class="dot"></span> 
+                    </div>
             </div>
             <!--Right column-->
             <div class="Column_1">
                 <h1>About</h1>
-                <p>
+                <p id="about">
                     I am a game developer who loves to imagine and innovate beyond what is possible with game creation!
                     <br>
-                    <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Game Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, Unreal Engine, Unity, and more. 
+                    <br>I am a current student at <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Game Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, Unreal Engine, Unity, and more. 
                     <br>
-                    <br>I am a full-stack  game developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below!
+                    <br>I am an aspiring game developer and would love to work with you on your project. <a href="#Contact">Contact</a> me below!
                 </p>
             </div>
         </div>
+        
         <!--Padding-->
-        <div class="main">
+        <div class="main" id="GitHub">
         </div>
         <!--End Padding-->
 
         <!--GitHub section-->
-        <div class="Row" id="GitHub">
+        <div class="Row" >
             <!--Left column-->
             <div class="Column_1">
                 <h1>GitHub</h1>
@@ -96,29 +135,51 @@
         </div>
 
         <!--Padding-->
-        <div class="main">
+        <div class="main" id="Contact">
+            
         </div>
         <!--End Padding-->
+        
 
         <!--Contact section-->
-        <div class="Row" id="Contact">
+        <div class="Row" >
             <!--Contact image, left column-->
             <div class="Column_2_1 Column_tall">
                 <img src="images/contact.jpg" alt="Contact_Image">
             </div>
             <!--Contact form, right column-->
             <div class="Column_1 Column_tall">
-                <h1>Contact</h1>
-                
-                <form action="https://formspree.io/f/xzboybkp" method="POST"> 
+                <h1 id="CF">Contact</h1>
+                <br>
+                <br>
+                <br>
+
+                <p id="CT">To contact me please fill out the form below and I will respond as soon as possible!
+                </p>
+
+
+
+
+
+            <div class="hCenter">
+                <button class="open-button" onclick="openForm()" id="OB">Open Contact Form</button>
+            </div>
+
+                <div class="form-popup" id="mContact">
+                <form action="https://formspree.io/f/xzboybkp" name="Contact" onsubmit="return validateForm()" class="form-container" method="post"> 
+                    
                     <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
+                        <input type="text" name="Name" placeholder="Please enter your name here">
                     <label>Email:</label>
                         <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                    <label>Phone Number:</label>
+                        <input type="text" id="PHN" name="PHN" placeholder="Please enter your phone number here">
                     <label>Message:</label>
                         <input type="text" id="Message" name="Message" placeholder="Please write your message here">
                         <input type="submit" value="SUBMIT">
+                        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
                 </form>
+            </div>
             </div>
         </div>
 
@@ -136,4 +197,7 @@
             </p>
         </footer>
     </body>
+    <script>
+        document.body.classList.add('fade-out');
+    </script>
 </html>
