@@ -606,6 +606,19 @@ background-color: #373775;
 
 
 /* The dots/bullets/indicators */
+
+.centerdots{
+    text-align: center;
+    position: relative;
+    top: 0px;
+}
+@media screen and (max-width: 975px) {
+    .centerdots {
+        top: -50px;
+    }
+}
+
+
 .dot {
   cursor: pointer;
   height: 15px;
