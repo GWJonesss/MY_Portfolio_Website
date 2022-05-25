@@ -280,10 +280,31 @@ a#foot{
     overflow: hidden;
     
 }
-
+/** this stacks the columns**/
 @media screen and (max-width: 975px) {
     .Column_1 {
         width: 100%;
+    }
+}
+
+.Column_1_1 {
+    float: left;
+    width: 50%; 
+    padding: 10px;
+    padding-top: 3%; 
+    height: 400px; 
+    background: rgba(23, 7, 49, .9);
+    box-shadow: inset 0 0 15px #000000;
+    z-index: 2;
+    overflow: hidden;
+    
+}
+
+
+@media screen and (max-width: 975px) {
+    .Column_1_1 {
+        width: 100%;
+        height: 200px;
     }
 }
 
