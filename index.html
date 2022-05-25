@@ -10,9 +10,11 @@
     </head>
 
     <!--Body-->
-   
+    
 
     <body class="Background">
+
+    
         
         
         
@@ -75,33 +77,35 @@
                 <!-- Full-width images with number and caption text -->
                 <div class="mySlides fade">
                 
-                <img src="images/Gabriel.jpg" style="width:100%">
+                <img src="images/Gabriel.jpg" >
                 <div class="text">I am ready to work on your project!</div>
                 </div>
                 
                 <div class="mySlides fade">
                 
-                <img src="images/unreal-engine-5.jpg" style="width:100%">
+                <img src="images/unreal-engine-5.jpg" >
                 <div class="text">I am a full-stack game developer, trained and experienced in: Unreal Engine(C++) and Unity(C#)
                 </div>
                 </div>
 
                 <div class="mySlides fade">
                 
-                <img src="images/GIF1.gif" style="width:100%">
+                <img  src="images/GIF1.gif" >
+                
                 <div class="text">I enjoy making interactive games,</div>
                 </div>
             
             
                 <div class="mySlides fade">
                 
-                <img src="images/GIF2.gif" style="width:100%">
+                <img src="images/GIF2.gif" >
+                
                 <div class="text">With immersive environments!</div>
                 </div>
 
                 <div class="mySlides fade">
                 
-                <img src="images/contact_today.jpg" style="width:100%" onclick="openForm()">
+                <img src="images/contact_today.jpg" onclick="openForm()">
                 <div class="text" onclick="openForm()">Contact me Today!</div>
                 </div>
             
@@ -142,7 +146,7 @@
         <div class="Row">
             <!--Left column-->
             <div class="Column_2_1">
-                <img src="images/contact.jpg" alt="About">
+                <img id="mainbody" src="images/contact.jpg" alt="About" >
             </div>
                 
                 
@@ -166,21 +170,22 @@
 
         <!--GitHub section-->
         <div class="Row" >
+            <!--Right column-->
+            <div class="Column_2_2" >
+                <a href="https://github.com/GWJonesss" target="_blank"><img id="mainbody" src="images/gabegithub.jpg" alt="GitHub Photo" ></a>
+            </div>
+        
+
             <!--Left column-->
             <div class="Column_1">
                 <h1>GitHub</h1>
-                <p>
+                <p class="center">
                     You can view my coding projects on my GitHub profile here:
                     <br>
                     <p class="center"><a href="https://github.com/GWJonesss" target="_blank">Gabriel Jones's Github</a></p>
                 </p>
             </div>
-            <!--Right column-->
-            <div class="Column_2_2" >
-                <a href="https://github.com/GWJonesss" target="_blank"><img src="images/gabegithub.jpg" alt="GitHub Photo"></a>
-            </div>
         </div>
-
         <!--Padding-->
         <div class="main" id="Contact">
             
@@ -218,6 +223,8 @@
     
 
         <!--Footer section-->
+        
+
         <footer>
             <br>
             <p>
@@ -227,6 +234,8 @@
                 <a id=foot href="https://github.com/GWJonesss" target="_blank"><img id=footerimg src="images/GitHub_logow.png"></a>
             </p>
         </footer>
+        
+
     </body>
     <script>
         document.body.classList.add('fade-out');
