@@ -343,7 +343,7 @@ a#foot{
     }
 }
 .Column_2_2 {
-    float: left;
+    float: right;
     width: 50%;
     padding: 10px;
     padding-top: 1.9%;
