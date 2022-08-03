@@ -12,7 +12,7 @@
     <!--Body-->
     
 
-    <body class="Background">
+    <body class="Background" id="Home">
 
     
         
@@ -21,9 +21,10 @@
         <!--Navbar-->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
-            <a href="#About">About</a>
             <a href="#Slideshow">Slideshow</a>
+            <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
+            <a href="#UnityGame">Live Unity Game</a>
             <a onclick="openForm()">Contact</a>
         </div>
 
@@ -32,7 +33,7 @@
         <br>
 
         <!--Background video-->
-        <div id="Home">
+        <div>
             <video autoplay muted loop id="Coding_Video" poster="images/Poster.png">
                 <source src="images/video/code.mp4" type="video/mp4">
                 
@@ -181,9 +182,11 @@
             <div class="Column_1_1">
                 <h1>GitHub</h1>
                 <p class="center">
-                    You can view my Unity Projects on my GitHub profile here:
+                    You can view my GitHub profile here:
                     <br>
-                    <p class="center"><a href="https://github.com/GWJonesss/Unity_Projects" target="_blank">Gabriel Jones's Unity Projects</a></p>
+                    <br>
+                    <br>
+                    <p class="center"><a href="https://github.com/GWJonesss" target="_blank">Gabriel Jones's GitHub</a></p>
                 </p>
             </div>
         </div>
@@ -218,7 +221,42 @@
                         <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
                 </div>
+
+
+
+                 
         </div>
+        <!--Unity Game section-->
+        <div class="Column_game" id="UnityGame" >
+            <p class="center">
+                <br>
+                <br>
+                <h1>Missile Command Remake</h1>
+                
+                
+            </p>
+            <p class="center" >
+                <h5>Please enjoy my Missile Command Remake I created with Unity!</h5>
+                
+                
+            </p>
+            <br>
+                
+            <div class="center">
+                <iframe src="https://i.simmer.io/@GWJonesss/missile-command-remake-1-0" style="width:960px;height:600px"></iframe>
+            </div>
+            
+        </div>
+
+
+         <!--END Unity Game section-->
+
+        <!--Padding-->
+        <div class="main">
+            
+        </div>
+        <!--End Padding-->
+        
 
         
     
